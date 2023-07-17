@@ -4,6 +4,7 @@
             "name": "Win32",
             "includePath": [
 				"C:/Program Files/mingw-w64/include/**",
+				"D:/OpenCV/opencv/build/include/**",
                 "${workspaceFolder}/**"
             ],
             "defines": [

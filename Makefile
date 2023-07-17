@@ -22,11 +22,11 @@ SRC		:= src/$(dir) #// 传递 var 变量定义执行文件目录
 CLEAN_SRC		:= src/$(dir)/*.o #// 删除所有.o文件
 
 # define include directory
-INCLUDE	:= include
+INCLUDE	:= include D:/OpenCV/opencv/build/include
 
 # define lib directory
-LIB		:= lib
-LIBRARIES := -lglad -lglfw3dll
+LIB		:= lib D:/OpenCV/opencv/build/mingw64/lib
+LIBRARIES := -lglad -lglfw3dll -lopencv_calib3d480 -lopencv_core480 -lopencv_dnn480 -lopencv_features2d480 -lopencv_flann480 -lopencv_gapi480 -lopencv_highgui480 -lopencv_imgcodecs480 -lopencv_imgproc480 -lopencv_java480 -lopencv_ml480 -lopencv_objdetect480 -lopencv_photo480 -lopencv_stitching480 -lopencv_video480
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
@@ -37,7 +37,7 @@ FIXPATH = $(subst /,/,$1)
 RM			:= del /q a/f
 MD	:= mkdir
 else
-LIBRARIES	:= -lglad -lglfw -ldl -lpthread
+LIBRARIES	+= -lglad -lglfw -ldl -lpthread
 MAIN	:= main
 SOURCEDIRS	:= $(shell find $(SRC) -type d)
 INCLUDEDIRS	:= $(shell find $(INCLUDE) -type d)
