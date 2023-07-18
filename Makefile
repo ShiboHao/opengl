@@ -26,7 +26,7 @@ INCLUDE	:= include
 
 # define lib directory
 LIB		:= lib
-LIBRARIES := -lglad -lglfw3dll -lopencv_calib3d480 -lopencv_core480 -lopencv_dnn480 -lopencv_features2d480 -lopencv_flann480 -lopencv_gapi480 -lopencv_highgui480 -lopencv_imgcodecs480 -lopencv_imgproc480 -lopencv_java480 -lopencv_ml480 -lopencv_objdetect480 -lopencv_photo480 -lopencv_stitching480 -lopencv_video480
+LIBRARIES := -lglad -lglfw3dll -lopencv_core480 -lopencv_features2d480 -lopencv_gapi480 -lopencv_highgui480 -lopencv_imgcodecs480 -lopencv_imgproc480 -lopencv_photo480 -lopencv_stitching480
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= main.exe
